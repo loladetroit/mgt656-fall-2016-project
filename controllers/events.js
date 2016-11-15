@@ -64,7 +64,13 @@ function saveEvent(request, response){
   if (validator.isLength(request.body.title, 5, 50) === false) {
     contextData.errors.push('Your title should be between 5 and 100 letters.');
   }
-  
+ 
+  if (validator.isLength(request.body.location, 5, 50) === false) {
+    contextData.errors.push('Your location should be between 5 and 100 letters.');
+  } 
+  if (validator.isURL(request.body.image) === false) {
+    contextData.errors.push('Your image should be a URL.');
+  }
 
   var year = checkIntRange(request, 'year', 2015, 2016, contextData);
   var month = checkIntRange(request, 'month', 0, 11, contextData);
