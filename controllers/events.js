@@ -59,7 +59,7 @@ function newEvent(request, response){
  * our global list of events.
  */
 function saveEvent(request, response){
-  var contextData = {errors: []};
+  var contextData = {error: []};
 
   if (validator.isLength(request.body.title, 5, 50) === false) {
     contextData.errors.push('Your title should be between 5 and 100 letters.');
@@ -68,7 +68,7 @@ function saveEvent(request, response){
   if (validator.isLength(request.body.location, 5, 50) === false) {
     contextData.errors.push('Your location should be between 5 and 100 letters.');
   } 
-  if (validator.isURL(request.body.image) === false) {
+  if (validator.isURL(request.body.image, ['http://','https://']) === false) {
     contextData.errors.push('Your image should be a URL.');
   }
 
