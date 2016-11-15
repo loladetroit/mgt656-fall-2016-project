@@ -59,7 +59,7 @@ function newEvent(request, response){
  * our global list of events.
  */
 function saveEvent(request, response){
-  var contextData = {error: []};
+  var contextData = {errors: []};
 
   if (validator.isLength(request.body.title, 5, 50) === false) {
     contextData.errors.push('Your title should be between 5 and 100 letters.');
