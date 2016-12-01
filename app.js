@@ -22,5 +22,8 @@ app.get('/about', aboutControllers.about);
 app.get('/events', eventControllers.listEvents);
 app.get('/events/new', eventControllers.newEvent);
 app.post('/events/new', eventControllers.saveEvent);
+app.post('/events/:id', eventControllers.eventDetail); // not so sure about the function this controller is tied to
+app.get('/events/:id', eventControllers.eventDetail);
+app.get('/api/events', eventControllers.api);
 
 module.exports = app;
