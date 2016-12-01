@@ -2,6 +2,8 @@
 
 {% block mainContent %}
 
+<h1 id='title'>{{event.title}}</h1>
+
   {% if errors %}
     <div>
       <p>Please correct the following errors!</p>
@@ -12,7 +14,34 @@
       </ul>
     </div>
   {% endif %}
+<ul>
+    <li><img id='image' src={{event.image}}></img>
+    <li><span id='date'>{{event.date|prettyDate}}</span>
+    <li><span id='location'>{{event.location}}</span>
+</ul>
 
+<form id='rsvp' method='POST'>
+    <ul>
+        <li>
+            Enter your Yale email address to RSVP:
+        </li>
+        <li>
+            <input type='email' id='email' name='email'>
+        </li>
+        <li>
+            <input type='submit' value='RSVP' required>
+        </li>
+</form>
+<p>
+    {{event.attending.length}} attending so far:
+</p>
+
+<div>
+<ul>
+    {{event.attending}}
+</ul>
+</div>
+<br>
 
 
 
