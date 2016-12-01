@@ -1,10 +1,13 @@
 header {
   font-weight: bold;
-}
+  height: 100px;
+  border-bottom: 1px solid black;
+  }
+
 
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
@@ -15,20 +18,51 @@ a {
 img {
     position: relative;
     float: center;
-    width:  400px;
+    width:  600px;
     height: 400px;
     background-position: 50% 50%;
     background-repeat:   no-repeat;
     background-size:     cover;
 }
 
+.team-names img {
+    width: 20%;
+    height: auto;
+    border: 2px solid navy;
+}
+
+.team-names li {
+    font: 40px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.tagline {
+  font-style: italic;
+}
+
+.homepage-events {
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
 .form-errors {
 	color: red;
 }
 
-ul {
+ul { 
+  display: inline-block; 
+  margin:0 auto;
   list-style-type: none;
+  left: -50%;
 }
 li{
   margin: 20px 0;
+}
+
+footer {
+    
+    border-top: 1px solid black;
+    height: 500px;
+    padding-top: 20px;
+    display: block;
+    margin-top: 50px;
+    width: 100%;
 }
