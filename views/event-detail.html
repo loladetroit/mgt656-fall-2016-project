@@ -4,16 +4,6 @@
 
 <h1 id='title'>{{event.title}}</h1>
 
-  {% if errors %}
-    <div>
-      <p>Please correct the following errors!</p>
-      <ul  class="form-errors">
-        {% for error in errors %}
-          <li>{{error}}</li>
-        {% endfor %}
-      </ul>
-    </div>
-  {% endif %}
 <ul>
     <li><img id='image' src={{event.image}}></img>
     <li><span id='date'>{{event.date|prettyDate}}</span>
@@ -29,20 +19,31 @@
             <input type='email' id='email' name='email'>
         </li>
         <li>
-            <input type='submit' value='RSVP' required>
+            <button name="submit">RSVP</button>
         </li>
 </form>
 <p>
     {{event.attending.length}} attending so far:
 </p>
 
-<div>
-<ul>
-    {{event.attending}}
+<ul class='attendees'>
+    {% for attending in events %}
+    <li id='attendees'>
+        {{attending}}    
+    </li>
+    {% endfor %}
 </ul>
-</div>
-<br>
 
+  {% if errors %}
+    <div>
+      <p>Please correct the following errors!</p>
+      <ul  class="form-errors">
+        {% for error in errors %}
+          <li>{{error}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
 
 
 {% endblock %}

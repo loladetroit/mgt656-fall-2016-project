@@ -1,23 +1,32 @@
 {% extends "layout.html" %}
 
 {% block mainContent %}
-  <div>
+
+  <br>
+
+  <img id='majorkeyalert' src='https://ih0.redbubble.net/image.210944982.3979/flat,800x800,075,f.u3.jpg'>
+  
+  <h1>
+    Events:
+  </h1>
+  <h2>
+    Things With People
+  </h2>
+  <h3>
+    In Places
+  </h3>
+  <h4>
+    (At Times)
+  </h4>  
+  
+  
+  <div class='events-lists-events-page'>
     {% include "fragments/events-list.html" %}
   </div>
   <div>
-    <a href="/events/new">Create a new event</a>
+    Don't like what you see?
+    <a href="/events/new">Create a new event.</a>
   </div>
 
 {% endblock %}
 
-{% block footer %}
-  <footer>  
-        <p>
-          
-        </p>
-        <p>
-        <a id="home" href="/">Home</a>
-        <a id="about" href="/about">About</a>
-        </p>
-  </footer>
-{% endblock %}

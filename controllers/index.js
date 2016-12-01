@@ -8,8 +8,8 @@ var events = require('../models/events');
 function index (request, response) {
   var now = new Date();
   var contextData = {
-    'title': 'Dauting-Sierra Events',
-    'tagline': 'Major Key, Many Minor Logistical Inconveniences.',
+    'title': 'Major Key Events',
+    'tagline': 'Where all the Keys are Major and the Numerous Logistical Inconveniences Minor.',
     'events': []
 };
   for(var i=0; i < events.all.length; i++){

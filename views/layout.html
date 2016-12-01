@@ -9,7 +9,17 @@
 	<body class="container">
 
     {% block header %}
-      <header>Daunting-Sierra Events: Major Key, Many Minor Logistical Inconveniences</header>
+      <header>
+        <h1>
+          Major Key Events
+        </h1>
+        <h5>
+          All We Do Is Win
+        </h5>
+        <h7>
+          (Also Host Dinner Parties)
+        </h7>
+      </header>
     {% endblock %}
 
     {% block mainContent %}
@@ -18,11 +28,27 @@
 
     {% block footer %}
       <footer>  
-        <p>
-        <a id="home" href="/">Home</a>
-        <a id="about" href="/about">About</a>
-        </p>
-        </footer>
+        <ul>
+          <li>
+            <a id="home" href="/">Home</a>
+          </li>
+          <li>
+            <a id="about" href="/about">About</a>
+          </li>
+          <li>
+            <a id="events-footer" href="/events">Events</a>
+          </li>
+          <li>
+            <a id="create-events-footer" href="/events/new">Create New Event</a>
+          </li>
+        </ul>
+        <h4>
+          Antoine's Tip of the Day:
+        </h4>
+        <div class='tip-of-the-day'>
+          <img id='pedicurekey' src='https://qzprod.files.wordpress.com/2016/01/screen-shot-2016-01-07-at-11-06-18-pm.png?w=940'>
+        </div>
+      </footer>
     {% endblock %}
 
   </body>

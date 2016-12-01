@@ -1,30 +1,33 @@
 {% extends "layout.html" %}
 
-{% block header %}
-  <header>
-    <h1>{{ title }}</h1>
-  </header>
-{% endblock %}
 
 {% block mainContent %}
-  <p>
-    Welcome to {{ title }}. {{tagline}}
-  </p>
+  <br>
+  <br>
+  <h4>
+    Welcome to {{ title }}
+  </h4>
+  <div class='tagline'>
+    <h5>
+      {{tagline}}
+    </h5>
+  </div>
   <p>
     <img id="logo" src="http://www.lifeistremendez.com/wp-content/uploads/2016/01/Khaled.png">
   </p>
-  <p>
-    Here is our list of events -- 
-  </p>
-  <div>
+  <h3>
+    Upcoming Events
+  </h3>
+  
+  <div class='homepage-events'>
     {% include "fragments/events-list.html" %}
   </div>
-  <p>
-    Check out the <a href="/about">About us</a> page,
+  <p class='check-out-our'>
+    Check out the <a href="/about">About us</a> page
     as well as the <a href="/events">Events</a> page.
   </p>
-  <p>
-    <a id="new" href="/events/new">Create a new event</a>
+  <p >
+    Or <a id="new" href="/events/new">create a new event</a>
   </p>
   <p>
      
