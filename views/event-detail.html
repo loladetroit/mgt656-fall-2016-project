@@ -19,7 +19,7 @@
             <input type='email' id='email' name='email'>
         </li>
         <li>
-            <input type='submit' value='RSVP' required>
+            <button name="submit">RSVP</button>
         </li>
 </form>
 <p>
@@ -27,9 +27,11 @@
 </p>
 
 <ul class='attendees'>
+    {% for attending in events %}
     <li id='attendees'>
-        {{event.attending}}    
+        {{attending}}    
     </li>
+    {% endfor %}
 </ul>
 
   {% if errors %}

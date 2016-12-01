@@ -53,8 +53,18 @@ function getById (id) {
   }
   return null;
 }
+function getHighestId (id) {
+  var highest = -1;
+  for (var i = allEvents.length - 1; i >= 0; i--) {
+    if (allEvents[i].id > highest){
+      highest = allEvents[i].id;
+    }
+  }
+  return highest;
+}
 
 module.exports = exports = {
   all: allEvents,
-  getById: getById
+  getById: getById,
+  getHighestId: getHighestId
 };

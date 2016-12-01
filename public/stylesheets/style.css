@@ -1,3 +1,5 @@
+
+
 header {
   font-weight: bold;
   height: 100px;
@@ -17,7 +19,7 @@ a {
 
 img {
     position: relative;
-    float: center;
+    float: none;
     width:  600px;
     height: 400px;
     background-position: 50% 50%;
@@ -41,6 +43,12 @@ img {
 
 .homepage-events {
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(167, 189, 206);
+}
+
+.events-lists-events-page {
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(167, 189, 206);
 }
 
 .form-errors {
@@ -59,10 +67,16 @@ li{
 
 footer {
     
-    border-top: 1px solid black;
-    height: 500px;
-    padding-top: 20px;
-    display: block;
-    margin-top: 50px;
-    width: 100%;
+  border-top: 1px solid black;
+  height: 500px;
+  padding-top: 20px;
+  display: block;
+  margin-top: 50px;
+  width: 100%;
+  }
+
+.tip-of-the-day img {
+  float: none;
+  width: 40%;
+  height: auto;
 }
